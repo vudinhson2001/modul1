@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum=0
+    let x=[
+        [1,2,3,4],
+        [2,5,4,6],
+        [5,8,9,10],
+    ]
+    for (let i=0; i<x.length;i++){
+        document.write("row"+i+"<br>")
+            for (let a = 0 ; a<x[i].length;a++){
+                document.write(x[i][a]+"<br>")
+                sum=sum+x[i][a]
+            }
+    }
+</script>
+</body>
+</html>

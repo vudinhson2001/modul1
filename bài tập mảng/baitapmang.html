@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>in các phần tử trong mảng</h1>
+<div id="id1"></div>
+<h1>in các phần tử chan</h1>
+<div id="id2"></div>
+<h1>tính tổng các phần tử</h1>
+<div id="id3"></div>
+<h1>Tính tích các phần tử chẵn</h1>
+<div id="id4"></div>
+<h1>tìm max</h1>
+<div id="id5"></div>
+<h1>tìm x</h1>
+<input type="text" id="timxx">
+<button onclick="timx()">tim X</button>
+<div id="id6"></div>
+<script>
+    let x = [1, 2, 5, 11, 9, 11, 11, 18, 22, 26]
+    //in tất cả các phần tử
+    for (let i = 0; i < x.length; i++) {
+        // document.write(x[i]+"<br>")
+        let text = document.getElementById("id1")
+        text.innerHTML = text.innerHTML + x[i] + "<br>"
+    }
+    // in các phần tử chẵn
+    for (let i = 0; i < x.length; i++) {
+        // document.write(x[i]+"<br>")
+        if (x[i] % 2 == 0) {
+            let text = document.getElementById("id2")
+            text.innerHTML = text.innerHTML + x[i] + "<br>"
+        }
+    }
+    // tính tổng các phần tử
+    let tong = 0;
+    for (let i = 0; i < x.length; i++) {
+        tong = tong + x[i]
+    }
+    document.getElementById("id3").innerHTML = tong
+
+    // tinh tich cac phan tu chan
+    let tich = 1
+    for (let i = 0; i < x.length; i++) {
+        // document.write(x[i]+"<br>")
+        if (x[i] % 2 == 0) {
+            tich = tich * x[i]
+        }
+    }
+    document.getElementById("id4").innerHTML = tich
+    // tim max
+    let max = x[0]
+    let vitri=0
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] > max) {
+            max = x[i]
+            vitri=i+1
+        }
+
+    }
+    document.getElementById("id5").innerHTML="max " + max +"vi tri " + vitri
+
+    function timx() {
+        let a = document.getElementById("timxx").value
+        let  soluong = 0
+        let text = document.getElementById("id6")
+        text.innerHTML=""
+
+        for (let i = 0; i < x.length; i++) {
+            if (x[i] == a) {
+                vitri = i
+                soluong ++
+                text.innerHTML = text.innerHTML + "tim thấy " + a + " ở vị trí :  " + vitri + "<br>"
+            }
+        }
+        if(soluong==0){
+            text.innerHTML = -1
+        }else{
+        text.innerHTML = text.innerHTML + "tim thấy " + a + " ở " + soluong + " vị trí "
+        }
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+
+<h1>sô lớn hơn hoặc bằng 10</h1>
+<div id="id1"></div>
+<h1>tìm max và vị trí</h1>
+<div id="id2"></div>
+<h1>tìm max và tính trung bình</h1>
+<div id="id3"></div>
+<h1> đếm số nguyên âm</h1>
+<div id="id4"></div>
+<h1> thứ tự giảm dần</h1>
+<div id="id5"></div>
+<script>
+    //số lớn hơn hoặc bằng 10
+    let text = document.getElementById("id1")
+    let x = [-1, -5, -8, -9, -12, 1, 5, 9, 15, 16, 18, 59, 64, 69, 68, 85, 96]
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] >= 10) {
+
+
+            text.innerHTML = text.innerHTML + x[i] + "<br>"
+        }
+    }
+    //tìm max và vị trí
+    let max = x[0]
+    let vitri = 1
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] > max) {
+            max = x[i];
+            vitri = i;
+        }
+    }
+    document.getElementById("id2").innerHTML = "max là :" + max + "<br>" + "vị trí : " + vitri
+    //tìm max và tính trung bình
+    let s = 0
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] > max) {
+            max = x[i];
+        }
+        s += x[i]
+
+    }
+    let tb = s / x.length
+    document.getElementById("id3").innerHTML = "max là : " + max + "<br>" + "trung bình là : " + tb
+
+
+    // số nguyên âm
+    for (let i = 0; i < x.length; i++){
+        if(x[i]<0){
+            let text = document.getElementById("id4")
+            text.innerHTML = text.innerHTML+ (x[i])
+        }
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

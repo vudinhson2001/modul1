@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = [];
+    for(let i=0 ; i<5 ; i++) {
+        let a= +prompt("nhập phần tử :" +i)
+        x.push(a)
+    }
+    let b = +prompt("nhập vào số cần xóa");
+    let vitri= x.indexOf(b);
+    if (vitri==-1){
+        alert("không có");
+    }else{
+        x.splice(vitri,1);
+        x.push(0)
+        document.write(x)
+    }
+</script>
+
+</body>
+</html>
