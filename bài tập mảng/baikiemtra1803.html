@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [
+        [5, 2, 3, 4],
+        [8, 1, 12, 6],
+    ]
+    let dem = 0
+    let tich = 1
+    let minchan = a[0][0]
+    let max = 0
+    // cau a
+    for (let i = 0; i < a.length; i++) {
+        for (let x = 0; x < a[i].length; x++) {
+            if (a[i][x] % 2 == 0) {
+                document.write(a[i][x] + "<br>")
+            }
+        }
+    }
+    //caub
+    for (let i = 0; i < a.length; i++) {
+        for (let x = 0; x < a[i].length; x++) {
+            if (a[i][x] % 2 == 0) {
+                document.write("phan tu chan "+a[i][x]+ "<br>")
+                dem++
+            }
+        }
+    }document.write("dem phan tu chan "+ dem )
+    //cau c
+    for (let i = 0; i < a.length; i++) {
+        for (let x = 0; x < a[i].length; x++) {
+            if (a[i][x] % 2 != 0) {
+                tich = tich * a[i][x]
+                document.write(tich + "<br>")
+            }
+        }
+    }
+    //cau d
+    for (let i = 0; i < a.length; i++) {
+        for (let x = 0; x < a[i].length; x++) {
+            if (a[i][x] > max) {
+                max = a[i][x]
+
+            }
+        }
+    }
+    document.write("max " + max+"<br>")
+    //cau e
+    for (let i = 0; i < a.length; i++) {
+        for (let x = 0; x < a[i].length; x++) {
+            if (a[i][x] == 0 && a[i][x] < minchan) {
+                minchan = a[i][x]
+
+            }
+        }
+    }
+    document.write("gia tri chan nho nhat la " + minchan+"<br>")
+
+
+</script>
+
+</body>
+</html>
