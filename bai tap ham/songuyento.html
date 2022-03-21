@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function x(n) {
+        let a = 1
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                a = 0;
+                break
+            }
+        }
+        return a
+    }
+
+    let b = +prompt("nhập số nguyên tố");
+    if (x(b) == 1) {
+        document.write(b + "là số nguyên tố");
+    } else {
+        document.write(b + "không phải là số nguyên tố");
+    }
+</script>
+
+</body>
+</html>
